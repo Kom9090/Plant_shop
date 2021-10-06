@@ -1,0 +1,240 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  font-display: swap;
+  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Regular.woff") format("woff"), url("../fonts/WorkSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  font-display: swap;
+  src: url("../fonts/WorkSans-Medium.woff") format("woff"), url("../fonts/WorkSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 280px;
+  overflow-x: hidden;
+  position: relative;
+  overflow: auto;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+._container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/*.header {
+    &__menu-icon {
+        @media (min-width: 850px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        @media (max-width: 849px) {
+            z-index: 30;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            transition: 0.5s;
+            margin-left: 10px;
+            & span,
+            & span::before,
+            & span::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 25px;
+                height: 2px;
+                margin-top: -0.8px;
+                margin-left: -12.5px;
+                background-color: #000;
+                transition: 0.2s;
+            }
+            & span::before,
+            & span::after {
+                content: "";
+            }
+            & span:before {
+                transform: translateY(-8px);
+            }
+            & span:after {
+                transform: translateY(8px);
+            }
+        }
+    }
+}
+@media (max-width: 849px) {
+    ._active-burger span {
+        height: 0;
+        margin-top: 0.05px;
+    }
+    ._active-burger span:before {
+        transform: rotate(45deg);
+    }
+    ._active-burger span:after {
+        transform: rotate(-45deg);
+    }
+    ._active-nav {
+        left: 0;
+    }
+}*/
