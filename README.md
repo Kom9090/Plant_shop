@@ -1,13 +1,12 @@
 # Plant shop
 
 Educational project
+Support IE
 
 
 ## Tech
 
 - HTML;
 - SCSS;
-- JavaScript;
 - Jquery;
-- Bootstrap 5
 - Gulp;
