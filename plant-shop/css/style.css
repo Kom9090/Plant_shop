@@ -252,7 +252,8 @@ a {
 
 .product__link::before,
 .footer__link::after,
-.sign-in::before {
+.sign-in::before,
+.cart__label {
   position: absolute;
   display: block;
   content: "";
@@ -394,6 +395,10 @@ body._lock {
 
 ._input:focus:-ms-input-placeholder {
   opacity: 0;
+}
+
+._add-to-cart._hold {
+  opacity: 0.5;
 }
 
 .header__wrapper {
@@ -590,6 +595,28 @@ body._lock {
   -o-transition: transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.cart__label {
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ca4219;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  z-index: 200;
 }
 
 .sign-in {
@@ -880,6 +907,15 @@ body._lock {
   overflow: hidden;
 }
 
+.top__img-wrapper._fly {
+  opacity: 1;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
 .top__slide-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1134,8 +1170,9 @@ body._lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1228,6 +1265,15 @@ body._lock {
   margin-bottom: 16px;
 }
 
+.product__img-wrapper._fly {
+  opacity: 1;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
 .product__title {
   margin-bottom: 8px;
   text-align: center;
@@ -1270,11 +1316,11 @@ body._lock {
       -ms-transform: scaleY(0);
           transform: scaleY(0);
   visibility: hidden;
-  -webkit-transition: background-size 0.2s linear, -webkit-transform 0.2s linear 0.5s;
-  transition: background-size 0.2s linear, -webkit-transform 0.2s linear 0.5s;
-  -o-transition: transform 0.2s linear 0.5s, background-size 0.2s linear;
-  transition: transform 0.2s linear 0.5s, background-size 0.2s linear;
-  transition: transform 0.2s linear 0.5s, background-size 0.2s linear, -webkit-transform 0.2s linear 0.5s;
+  -webkit-transition: background-size 0.2s linear, -webkit-transform 0.2s linear;
+  transition: background-size 0.2s linear, -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear, background-size 0.2s linear;
+  transition: transform 0.2s linear, background-size 0.2s linear;
+  transition: transform 0.2s linear, background-size 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .product__add-btn:hover {
@@ -1710,6 +1756,11 @@ body._lock {
 
   .search__btn {
     margin-left: 0;
+  }
+
+  .cart__label {
+    top: 20%;
+    right: 25%;
   }
 
   .sign-in {
