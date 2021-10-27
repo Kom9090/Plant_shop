@@ -1,7 +1,6 @@
 # Plant shop
 
 Educational project
-Support IE
 
 
 ## Tech
