@@ -1,0 +1,65 @@
+.advantages {
+
+    &__wrapper {
+        @extend %padding-bottom;
+        display: flex;
+        justify-content: space-between;
+        margin: -1.6rem;
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        
+    }
+
+    &__card {
+        flex: 1 1 25%;
+        height: auto;
+        border: 1px solid $alto;
+        padding: 2.2rem 1.6rem;
+        margin: 1.6rem;
+        
+        @media (max-width: $tablet) {
+            flex: 0 1 46%;
+            padding: 22px 16px;
+        }
+        @media (max-width: $xl-phone) {
+            flex: 0 1 44%;
+        }
+        @media (max-width: $phone) {
+            flex: 1 1 100%;
+        }
+    }
+}
+
+.card-plus {
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    &__img {
+        margin-right: 16px;
+        flex-shrink: 0;
+    }
+
+    &__title {
+        font-family: $mont-bold-font;
+        color: $genoa;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        @media (max-width: $tablet-wide) {
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+
+    &__text {
+        color: $brown;
+        font-size: 10px;
+        line-height: 16px;
+    }
+}

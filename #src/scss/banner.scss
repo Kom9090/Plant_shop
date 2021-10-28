@@ -1,0 +1,49 @@
+.banner {
+
+    
+
+    &__wrapper {
+        @extend %padding-bottom;
+    }
+
+    &__content {
+        background: $athensGray url(../image/sanni.jpg) 72.5rem/40rem no-repeat ;
+        height: 36rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 9.7rem;
+        @media(max-width: $tablet-wide) {
+            height: 280px;
+            background-position: right bottom;
+        }
+        @media(max-width: $xl-phone) {
+           background-image: url(../image/sanni-576.jpg);
+           background-size: 20rem;
+           padding-left: 30px;
+        } 
+    }
+
+    &__title {
+        max-width: 58.3rem;
+        margin-bottom: 3.2rem;
+        @media(max-width: $xl-phone) {
+            max-width: 30rem;
+        }  
+    }
+
+    &__btn {
+        width: 152px;
+        color: $white;
+        background-color: $genoa;
+        cursor: pointer;
+        transition: background-color 0.2s linear; 
+        &:hover {
+            background-color: $ghover;
+        }
+    }
+}
+
+
+
+

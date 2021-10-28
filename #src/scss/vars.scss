@@ -1,0 +1,77 @@
+//medias
+
+$desktop: 1400px;
+$laptop: 1200px;
+$tablet-wide: 1000px;
+$tablet: 768px;
+$xl-phone: 576px;
+$phone: 400px;
+
+//====================================colors===================================
+
+$white: #fff;
+$black: #000;
+$genoa: #156963;
+$ghover: #22a097;
+$brown: #2C1500;
+$mineShaft: #333333;
+$alto: #E0E0E0;
+$athensGray: #F3F4F6;
+$bgwhite: #F3F3F2;
+
+//====================================sizes=====================================
+
+$minWidth: 280;
+$maxWidth: 1920;
+$container: 1280;
+
+//======================================fonts===================================
+
+$mont-reg-font: "Montserrat-Regular", sans-serif;
+$mont-med-font: "Montserrat-Medium", sans-serif;
+$mont-sem-font: "Montserrat-SemiBold", sans-serif;
+$mont-bold-font: "Montserrat-Bold", sans-serif;
+$work-reg-font: "WorkSans-Regular", sans-serif;
+$work-med-font: "WorkSans-Medium", sans-serif;
+$nunito-font: "Nunito-Bold", sans-serif;
+
+//=====================================mixins===================================
+
+@mixin a-sizes($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+    $Width: $container - $minWidth;
+    @if $type==1 {
+        #{$property}: $startSize + px;
+        @media (max-width: #{$container + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$Width}));
+        }
+    } @else if $type==2 {
+        #{$property}: $startSize + px;
+        @media (min-width: #{$container + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$Width}));
+        }
+    } @else {
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$Width}));
+    }
+}
+
+//=====================================patterns===============================
+
+%padding-bottom {
+    padding-bottom: 8rem;  
+}
+
+%absolute {
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+%hideText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+

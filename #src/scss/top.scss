@@ -1,0 +1,251 @@
+.top {
+
+    padding-bottom: 14rem;
+    @media (max-width: $tablet) {
+        padding-top: 78px;
+    }
+    @media (max-width: $xl-phone) {
+        padding-bottom: 8rem;
+    }
+
+    &__container {
+        padding: 0;
+        position: relative;
+        @media (max-width: $tablet-wide) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media (max-width: $phone) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__slider-content {
+        display: flex;
+        width: 100%;
+        height: 74rem;
+        @media (max-width: $xl-phone) {
+            flex-direction: column;
+            justify-content: space-between;
+            height: auto;
+        }
+    }
+
+    &__img-wrapper {
+        flex: 0 0 47.5%;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        @media (max-width: $xl-phone) {
+            order: 2;
+            height: 74rem;
+            flex: 0 0 auto;
+        }
+        &._fly {
+            opacity: 1;
+            position: fixed;
+            z-index: 1000;
+            transform: scale(0.5);
+            transition: 0.8s;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    &__slide-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6%;
+        justify-content: center;
+        width: 100%;
+        margin: 100px 0 16rem 0;
+        @media(max-width: $tablet) {
+            margin: 0 0 16rem 0;
+        }
+        @media (max-width: $xl-phone) {
+            padding: 10% 6% 23rem 6%;
+            background-color: $genoa;
+            min-height: 40.64rem;
+            margin: 0;
+            
+        }
+        @media (max-width: $phone) {
+            padding: 10% 10px;
+            padding: 10% 10px 23rem 10px;
+        }
+    }
+
+    &__slide-title {
+        max-width: 52rem;
+        font-family: $mont-med-font;
+        font-size: 6.6rem;
+        line-height: 8.3rem;
+        color: $genoa;
+        @extend %hideText;
+        -webkit-line-clamp: 3;
+        margin-bottom: 1.5rem;
+        @media (max-width: $tablet-wide) {
+            font-size: 5rem;
+            line-height: 6rem;
+            
+        }
+        @media (max-width: $xl-phone) {
+            color: white;
+            margin-bottom: 15px;
+            
+        }
+    }
+
+    &__slide-price {
+        font-family: $mont-sem-font;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+        padding: 10px;
+        border: 1px solid $alto;
+        align-self: flex-start;
+        @media (max-width: $xl-phone) {
+            color: white;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__slide-text {
+        max-width: 520px;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+        color: $brown;
+        @extend %hideText;
+        @media (max-width: $tablet-wide) {
+            font-size: 14px;
+            line-height: 24px;
+        }
+        @media (max-width: $xl-phone) {
+            color: white;
+        }
+    }
+
+    &__btn {
+        width: 250px;
+        height: 38px;
+        background-color: $genoa;
+        color: $white;
+        border: 0;
+        margin-top: 3rem;
+        cursor: pointer;
+        transition: background-color 0.2s linear;
+        &:hover {
+            background-color: $ghover;
+        }
+        @media(max-width: $xl-phone) {
+            background-color: $white;
+            margin-top: 30px;
+            color: $genoa;
+            &:hover {
+                color: $white;
+            }
+        }  
+        @media(max-width: $phone) {
+            width: 100%;
+        }  
+    }
+
+}
+
+.arrow {
+
+    display: flex;
+    flex-direction: column;
+    
+    &__head {
+        color: $mineShaft;
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+        font-family: $mont-med-font;
+        transition: color 0.3s linear;
+    }
+
+    &__img {
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 0.8rem;
+        & path {
+            transition: fill 0.3s linear;
+        }
+    }
+
+    &__name {
+        color: $genoa;
+        font-family: $mont-med-font;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+        transition: color 0.3s linear;
+        text-align: start;
+        @extend %hideText;
+        -webkit-line-clamp: 1;
+        @media (max-width: $tablet-wide) {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.top__container .slick-arrow {
+
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 32rem;
+    height: 16rem;
+    background-color: $white;
+    border: 0;
+    border-radius: 0;
+    padding: 3.9rem 1rem 3.9rem 4.9rem;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    transition: background-color 0.3s linear 0.1s;
+    @media (max-width: $xl-phone) {
+        top: calc(100% - 90rem);
+        width: 50%;
+    }
+
+    &.slick-prev {
+        right: 32.5rem;
+        @media (max-width: $xl-phone) {
+            left: 0;
+        }
+    }
+    &.slick-next{
+        right: 0;
+    }
+    &:hover {
+        background-color: $genoa;
+        & .arrow__name {
+            color: $white;
+        }
+        & .arrow__head {
+            color: $athensGray;
+        }
+        & .arrow__img path {
+            fill: $athensGray;
+        }
+    }
+
+    
+    
+}
+
+.slick-next__img {
+    transform: rotate(180deg);
+    margin: 0 0 0 8px;
+}
+
+
+
+

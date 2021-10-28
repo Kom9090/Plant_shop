@@ -1490,30 +1490,37 @@ picture img {
 }
 
 .cart-item__info {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 15%;
-          flex: 0 0 15%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 3rem;
 }
 
 .cart-item__title {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 2rem;
+  margin: 0 2rem 2rem 2rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
 }
 
 .cart-item__price {
   font-family: "Montserrat-Medium", sans-serif;
   font-size: 16px;
+  display: none;
 }
 
 .cart-item__quantity {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 35%;
-          flex: 0 0 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1523,20 +1530,10 @@ picture img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.cart-item__total {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-left: auto;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  margin: 0 2rem 2rem 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
 }
 
 .cart-item__delete {
@@ -1566,6 +1563,11 @@ picture img {
 .cart-item__total-price {
   font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 18px;
+  margin-left: 2rem;
+  text-align: end;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
 }
 
 .quantity__btn-n {
@@ -1661,6 +1663,31 @@ picture img {
 
 .total__btn:hover {
   background-color: #22a097;
+}
+
+.modal-search__content {
+  background-color: #F3F3F2;
+}
+
+.modal-search__item {
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
+  margin-bottom: 10px;
+}
+
+.modal-search__title {
+  font-size: 17px;
+  font-family: "Montserrat-Bold", sans-serif;
+  color: #00008d;
+  margin-bottom: 15px;
+}
+
+.modal-search__title:hover {
+  text-decoration: underline;
+}
+
+.modal-search__text {
+  font-size: 14px;
 }
 
 @media (max-width: 1280px) {
@@ -1875,22 +1902,6 @@ picture img {
 
   .product__img-wrapper {
     height: 38.6rem;
-  }
-
-  .cart-item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    max-height: 210px;
-  }
-
-  .cart-item__quantity {
-    margin-top: 40px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: 3rem;
   }
 }
 
@@ -2186,32 +2197,41 @@ picture img {
     max-width: 30rem;
   }
 
-  .cart-item__img-wrapper {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 80px;
-  }
-
   .cart-item__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .cart-item__title {
-    margin: 0 10px 0 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin: 0 0 15px 0;
   }
 
   .cart-item__quantity {
-    margin: 0 0 10px auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin: 0 0 15px 0;
+  }
+
+  .cart-item__delete {
+    bottom: 5px;
+  }
+
+  .cart-item__total-price {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 }
 
@@ -2255,5 +2275,9 @@ picture img {
 
   .goods__list-item {
     margin: 0.7rem;
+  }
+
+  .cart-item {
+    padding: 10px 10px 40px 10px;
   }
 }
