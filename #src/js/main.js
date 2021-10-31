@@ -172,6 +172,10 @@ $(function() {
         }, 200);
         if(modalId === "#searchModal") {
             $(".search__input").focus();
+        } else if(modalId === "#signIn") {
+            $("#email_signIn").focus();
+        } else if(modalId === "#signUp") {
+            $("#name").focus();
         }
         
 

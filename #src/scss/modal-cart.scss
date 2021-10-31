@@ -107,6 +107,9 @@
         @media(max-width: $xl-phone) {  
             bottom: 5px;
         }
+        @media(max-width: $phone) {  
+            right: 10px;
+        }
     }
 
     &__total-price {

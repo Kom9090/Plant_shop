@@ -2165,6 +2165,7 @@ picture img {
         -ms-flex-pack: center;
             justify-content: center;
     border-right: 1px solid #E0E0E0;
+    background-color: #fff;
   }
 
   .cart__label {
@@ -2462,5 +2463,9 @@ picture img {
 
   .cart-item {
     padding: 10px 10px 40px 10px;
+  }
+
+  .cart-item__delete {
+    right: 10px;
   }
 }
