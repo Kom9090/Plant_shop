@@ -102,16 +102,49 @@
         }
     }
 
+    &__info-link {
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+
     &__slide-price {
         font-family: $mont-sem-font;
         font-size: 16px;
-        margin-bottom: 1.5rem;
         padding: 10px;
         border: 1px solid $alto;
         align-self: flex-start;
         @media (max-width: $xl-phone) {
             color: white;
             margin-bottom: 15px;
+        }
+    }
+
+    &__link {
+        color: $genoa;
+        margin-left: 5px;
+        position: relative;
+        transition: color 0.2s linear;
+        &::before {
+            @extend %absolute;
+            width: 75px;
+            height: 2px;
+            bottom: 3px;
+            background-color: $ghover;
+            transform: scaleY(0);
+            transition: transform 0.2s linear;
+        }
+        &:hover {
+            color: $ghover;
+        }
+        &:hover::before {
+            transform: scaleY(1);
+        }
+        @media(max-width: $xl-phone) {
+            color: $white;
+            &::before {
+                background-color: $white;
+                transform: scaleY(1);
+            }
         }
     }
 

@@ -1,21 +1,26 @@
 <div class="popup modal-search" id="searchModal">
     <div class="popup__content modal-search__content">
         <header class="popup__header">
-            <h2 class="_h2-title popup__title">Searching result</h2>
+            <h2 class="_h2-title popup__title">Searching</h2>
             <button class="popup__close" type="button" aria-label="button close modal window" data-close>
                 <img class="popup__close-icon" src="./image/dagger.svg" alt="dagger"  width="20px" height="20px">
             </button>
         </header>
         <div class="popup__body modal-search__body">
+            <form class="search search__form" action="GET" >
+                <input class="search__input _input" type="search" placeholder="searching" maxlength="32">
+                <button class="search__btn" type="submit">Search</button>
+            </form>
+            
             <ul class="modal-search__list"> 
-                <li class="modal-search__item">
+                <!-- <li class="modal-search__item">
                     <a href="#" class="modal-search__link">
                         <h3 class="modal-search__title">Kaktus</h3>
                         <p class="modal-search__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,</p>
                     </a>
                 </li>
                 <li class="modal-search__item"></li>
-                <li class="modal-search__item"></li>   
+                <li class="modal-search__item"></li>    -->
             </ul>
         </div>
     </div>

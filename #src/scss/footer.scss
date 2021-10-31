@@ -82,17 +82,7 @@
     &__input {
         display: block;
         width: 234px; 
-        border: 1px solid $athensGray;
-        font-family: $work-reg-font;
         margin-bottom: 15px;
-        transition: border-color 0.2s linear;
-        &:hover {
-            border-color: $alto;
-        }
-        &:focus {
-            border-color: $genoa;
-            outline: none;
-        }
         @media(max-width: $xl-phone) {
             width: 300px;
         }

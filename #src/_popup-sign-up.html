@@ -1,5 +1,5 @@
 <div class="popup modal-signUp" id="signUp">
-    <div class="popup__content">
+    <div class="popup__content modal-signUp__content">
         <header class="popup__header">
             <h2 class="_h2-title popup__title">Sign up</h2>
             <button class="popup__close" type="button" aria-label="button close modal window" data-close>
@@ -7,17 +7,20 @@
             </button>
         </header>
         <div class="popup__body">
-            <form action="get" class="modal-signUp__form form">
-                <label for="name" class="form__label">
-                    <input type="text" class="form__input">
+            <form class="modal-signUp__form form" action="get" >
+                <label class="form__label" for="name">
+                    <span class="form__label-text">Name</span>
+                    <input class="form__input _input" name="name" type="text" required>
                 </label>
-                <label for="email" class="form__label">
-                    <input type="email" class="form__input">
+                <label class="form__label" for="email">
+                    <span class="form__label-text">Email</span>
+                    <input class="form__input _input" name="email" type="email" required>
                 </label>
-                <label for="password" class="form__label">
-                    <input type="password" class="form__input">
+                <label class="form__label" for="password">
+                    <span class="form__label-text">Password</span>
+                    <input class="form__input _input" name="password" type="password" required>
                 </label>
-                <button type="submit">Send</button>
+                <button class="form__btn" type="submit">Send</button>
             </form>
         </div>
     </div>

@@ -37,3 +37,41 @@
         font-size: 14px;
     }
 }
+
+.search {
+
+    &__form {
+        display: flex;
+        @media(max-width: $xl-phone) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__input {
+        flex: 0 1 80%;
+        text-align: center;
+        margin-bottom: 30px;
+        @media(max-width: $xl-phone) {
+            flex: 0 0 100%;
+        }
+    }
+    &__btn {
+        flex: 0 0 20%;
+        height: 38px;
+        border: 0;
+        background-color: $genoa;
+        color: $white;
+        cursor: pointer;
+        border-radius: 0;
+        margin-left: 10px;
+        transition: background-color 0.2s linear;
+        &:hover {
+            background-color: $ghover;
+        }
+        @media(max-width: $xl-phone) {
+            flex: 0 0 100%;
+            margin: 0;
+        }
+    }
+}
+

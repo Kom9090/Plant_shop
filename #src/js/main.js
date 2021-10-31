@@ -13,13 +13,10 @@ $(function() {
 //==========================функция добавления активного класса==================================
 
 
-    function getActiveClass (class1, class2, class3) {
+    function getActiveClass (class1, class2) {
 
              $(class1).on("click", function() {
                 $(class2).toggleClass("_active");
-                if(class3) {
-                    $(class3).focus();
-                }
             });
             $(document).on("click", function(e) {
                 if($(e.target).closest(class2).length === 0) {
@@ -29,11 +26,23 @@ $(function() {
         
     }
 
-    getActiveClass (".search__btn", ".search", ".search__input"); //активация кнопки поиск
     getActiveClass (".header__sign", ".header__sign"); //активация выпадающей кнопки входа
     getActiveClass (".select__btn", ".select"); //активация селекта
     
 
+    $(".search__input").on("input", function() {
+        const searhBtn = $(".search__btn");
+        const searchInput = $(".search__input");
+        if(searchInput.val() !== "") {
+            searhBtn.on("click", function() {
+                $(".modal-search").addClass("_open");
+                setTimeout(function() {
+                    $(".modal-search").find(".popup__content").css("opacity", 1);
+                }, 200);
+            });
+            
+        } 
+    });
 
 //===================================== слик слайдер ===========================
 
@@ -151,6 +160,7 @@ $(function() {
 
         let item = $(this);
         let modalId = item.data("popup");
+        
         const lockPaddingValue = $(window).outerWidth() - $(".content").outerWidth();
         $(".popup._open").removeClass("_open");
         $(modalId).addClass("_open");
@@ -160,6 +170,9 @@ $(function() {
         setTimeout(function() {
             $(modalId).find(".popup__content").css("opacity", 1);
         }, 200);
+        if(modalId === "#searchModal") {
+            $(".search__input").focus();
+        }
         
 
     });
@@ -504,7 +517,7 @@ $(function() {
 
 
 
-//==================================================================
+//=================================Lazy loading==============================
 
 
 
