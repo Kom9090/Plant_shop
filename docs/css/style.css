@@ -405,6 +405,10 @@ picture img {
   display: block;
 }
 
+._none {
+  pointer-events: none;
+}
+
 .header__wrapper {
   background-color: transparent;
   position: absolute;
@@ -1591,6 +1595,7 @@ picture img {
   width: 9px;
   height: 1px;
   background-color: #000;
+  pointer-events: none;
 }
 
 .quantity__icon-plus {
@@ -1599,6 +1604,7 @@ picture img {
   height: 1px;
   background-color: #000;
   position: relative;
+  pointer-events: none;
 }
 
 .quantity__icon-plus::after {
@@ -1680,6 +1686,8 @@ picture img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .search__input {

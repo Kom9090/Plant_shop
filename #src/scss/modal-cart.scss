@@ -151,6 +151,7 @@
         width: 9px;
         height: 1px;
         background-color: $black;
+        pointer-events: none;
     }
     
     &__icon-plus {
@@ -159,6 +160,7 @@
         height: 1px;
         background-color: $black;
         position: relative;
+        pointer-events: none;
         &::after {
             @extend %absolute;
             width: 9px;

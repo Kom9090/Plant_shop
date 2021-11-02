@@ -30,20 +30,6 @@ $(function() {
     getActiveClass (".select__btn", ".select"); //активация селекта
     
 
-    $(".search__input").on("input", function() {
-        const searhBtn = $(".search__btn");
-        const searchInput = $(".search__input");
-        if(searchInput.val() !== "") {
-            searhBtn.on("click", function() {
-                $(".modal-search").addClass("_open");
-                setTimeout(function() {
-                    $(".modal-search").find(".popup__content").css("opacity", 1);
-                }, 200);
-            });
-            
-        } 
-    });
-
 //===================================== слик слайдер ===========================
 
 
@@ -54,57 +40,66 @@ $(function() {
         swipe: false
     });
 
-
  // добавление содержимого кнопкам слайдера
 
-    let NUMBER_PREV = 3;
-    let NUMBER_NEXT = 1;
-    const titleArr = $(".top__slide-title");
-    let textNamePrev = $(titleArr[NUMBER_PREV]).text();
+    const titleArr = $(".top__slide-title"); // коллекция заглавий
+    const titleLength = titleArr.length; 
+    let NUMBER_PREV = titleLength - 1; // начальное значение индекса предыдущего слайда
+    let NUMBER_NEXT = 1; // начальное значение индекса следующего слайда
+    let textNamePrev = $(titleArr[NUMBER_PREV]).text(); 
     let textNameNext = $(titleArr[NUMBER_NEXT]).text();
-    let titleLength = titleArr.length;
-    let slickBtn = $(".slick-arrow");
+    
+    const slickBtn = $(".slick-arrow"); // коллекция кнопок
 
-    $("._name-prev").text(textNamePrev);
+    $("._name-prev").text(textNamePrev); // изминение текста кнопок при загрузке страницы
     $("._name-next").text(textNameNext);
 
     slickBtn.on("click", function() {
-        let item = $(this);
+        const item = $(this);
         
         if (item.hasClass("slick-next")) {
-
-            NUMBER_PREV += 1;
+            // если кнопка = "следующий слайд", прибавляем +1 к индексу 
+            NUMBER_PREV += 1; 
             NUMBER_NEXT += 1;
+             // если индексы больше длины массива, обнуляем индекс 
             if(NUMBER_NEXT === titleLength) {
                 NUMBER_NEXT = 0;
             }
             if(NUMBER_PREV === titleLength) {
                 NUMBER_PREV = 0;
             }
-            
+            // функция изминение текста кнопок 
             changeButtonText(NUMBER_PREV, NUMBER_NEXT);
-            
 
+            
         } else {
+            // если кнопка = "предыдущий слайд", отнимаем -1 от индекса 
             NUMBER_PREV -= 1;
             NUMBER_NEXT -= 1;
+            // если индексы меньше 0, возвращаем начальное значение 
             if(NUMBER_PREV < 0) {
                 NUMBER_PREV = titleLength - 1;
             }
             if(NUMBER_NEXT < 0) {
                 NUMBER_NEXT = titleLength - 1;
             }
-
+            // функция изминение текста кнопок 
             changeButtonText(NUMBER_PREV, NUMBER_NEXT);
             
         }
         
         function changeButtonText(NUMBER_PREV, NUMBER_NEXT) {
+
+            item.addClass("_none"); // убераем возможность повторного клика до смены слайда
             let nextText = $(titleArr[NUMBER_NEXT]).text();
             $("._name-next").text(nextText);
 
             let prevText = $(titleArr[NUMBER_PREV]).text();
             $("._name-prev").text(prevText);
+            $('.slider').on('afterChange', function(){
+               item.removeClass("_none");  // после события смены слайда - возвращаем кликабельность кнопке
+            });
+            
         }
         
     });
@@ -347,7 +342,7 @@ $(function() {
                         <h3 class="cart-item__title">` + productName + `</h3>
                         <span class="cart-item__price">` + productPrice + `$</span> 
                         <div class="cart-item__quantity quantity">
-                            <button class="quantity__minus quantity__btn-n _no-active" type="button" aria-label="minus button">
+                            <button class="quantity__minus quantity__btn-n _no-active" type="button" tabindex="-1" aria-label="minus button">
                                 <span class="quantity__icon-minus"></span>
                             </button>                                     
                             <label class="quantity__label" for="number" aria-label="Quantity">
@@ -415,7 +410,7 @@ $(function() {
         const modalCart = $(".modal-cart__list"); //находим родителя блока кнопок
         const MAX_PRODUCTS = 10; //устанавливаем ограничение на максимальное колличество товаров
 
-        modalCart.on("focusout", function(e) {
+        modalCart.on("input", function(e) {
             if($(e.target).closest(".quantity__input").length === 1) {    //отлавливаем события при потери фокуса поля ввода
                 
                 let item = $(e.target);
@@ -427,15 +422,14 @@ $(function() {
                 let priceInitial = item.parent().parent().parent().find(".cart-item__price").clone(true); //клонируем значение цены товара
                 let priceTotal = item.parent().parent().parent().find(".cart-item__total-price"); 
                 
-                if (item.val() === "" || item.val() < 2) {
-                    item.val("1");
+                if (item.val() < 2) {
                     hideMinus(item);
                     showPlus(item); 
                     priceTotal.text(priceInitial.text());
                     getTotalPrice();
                     
 
-                } else if (item.val() > MAX_PRODUCTS) {
+                } else if (item.val() >= MAX_PRODUCTS) {
                     item.val("10");
                     hidePlus(item);
                     showMinus(item);
@@ -455,6 +449,23 @@ $(function() {
                 }
             }
         });
+        modalCart.on("focusout", function(e) {
+            if($(e.target).closest(".quantity__input").length === 1) {    //отлавливаем события при потери фокуса поля ввода
+                
+                let item = $(e.target);
+
+                let priceInitial = item.parent().parent().parent().find(".cart-item__price").clone(true); //клонируем значение цены товара
+                let priceTotal = item.parent().parent().parent().find(".cart-item__total-price"); 
+                
+                if (item.val() === "" || item.val() < 2) {
+                    item.val("1");
+                    hideMinus(item);
+                    showPlus(item); 
+                    priceTotal.text(priceInitial.text());
+                    getTotalPrice();
+                }
+            }
+        });
         modalCart.on("click", function(e) {
             if($(e.target).closest(".quantity__plus").length === 1) {
                 let item = $(e.target);
@@ -464,10 +475,10 @@ $(function() {
                     return text.replace("$", "");
                 });
                 let input = item.prev().children();
-                item.parent().find(".quantity__minus").removeClass("_no-active");
+                item.parent().find(".quantity__minus").removeClass("_no-active").removeAttr("tabindex");;
                 input[0].stepUp();
                 if (Number(input.val()) === MAX_PRODUCTS) {
-                    item.addClass("_no-active");
+                    item.addClass("_no-active").attr("tabindex", "-1").blur();
                 }
                 
                 priceTotal.text(String(Number(input.val()) * Number(priceInitialNew.text())) + "$");
@@ -481,10 +492,10 @@ $(function() {
                     return text.replace("$", "");
                 });
                 let input = item.next().children();
-                item.parent().find(".quantity__plus").removeClass("_no-active");
+                item.parent().find(".quantity__plus").removeClass("_no-active").removeAttr("tabindex");;
                 input[0].stepDown();
                 if (Number(input.val()) === 1) {
-                    item.addClass("_no-active");
+                    item.addClass("_no-active").attr("tabindex", "-1").blur();
                 } 
                 
                 priceTotal.text(String(Number(input.val()) * Number(priceInitialNew.text())) + "$");
@@ -505,16 +516,16 @@ $(function() {
             });
         }
         function hideMinus(item) {
-            item.parent().prev().addClass("_no-active");
+            item.parent().prev().addClass("_no-active").attr("tabindex", "-1").blur();
         }
         function hidePlus(item) {
-            item.parent().next().addClass("_no-active");
+            item.parent().next().addClass("_no-active").attr("tabindex", "-1").blur();
         }
         function showMinus(item) {
-            item.parent().prev().removeClass("_no-active");
+            item.parent().prev().removeClass("_no-active").removeAttr("tabindex");
         }
         function showPlus(item) {
-            item.parent().next().removeClass("_no-active");
+            item.parent().next().removeClass("_no-active").removeAttr("tabindex");;
         }
 
 });
