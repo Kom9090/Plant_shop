@@ -1,0 +1,15 @@
+._h2-title {
+  @extend %reset-title;
+  font-family: $font-mont;
+  font-weight: 700;
+  @include a-sizes('font-size', 40, 20, 2);
+  line-height: 1.4;
+  color: $brown;
+}
+
+._section-title {
+  @extend %reset-title;
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: 1.2;
+}

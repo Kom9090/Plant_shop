@@ -1,0 +1,101 @@
+.footer {
+  border-top: 1px solid $alto;
+  &__container {
+    @media (min-width: $xl) {
+      padding: 0 167px;
+    }
+    @media (min-width: $lg) {
+      padding: 0 56px;
+    }
+  }
+
+  &__wrapper {
+    padding: 5% 0 6% 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media(min-width: $lg) {
+        flex-wrap: nowrap;
+    }
+  }
+
+  &__column {
+    flex: 1 0 100%;
+    margin-bottom: $off * 3;
+    @media(min-width: $md) {
+      flex: 0 1 auto;
+      display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  }
+
+  &__title {
+    @extend %reset-title;
+    font-family: $font-work;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $dark;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @extend %reset-list;
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: $font-work;
+    font-size: rem(14);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    &::after {
+      @extend %absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+      top: 110%;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+    }
+    &:hover::after {
+       opacity: 1;
+    }
+  }
+
+  &__form {
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 14px;
+    @media(min-width: $xs) {
+       max-width: 300px; 
+    }
+    @media(min-width: $md) {
+      max-width: 234px; 
+   }
+  }
+
+  &__btn {
+    display: block;
+    width: 110px;
+    height: 36px;
+    border: 0;
+    background-color: $genoa;
+    color: $white;
+    font-family: $font-work;
+    font-size: rem(12);
+    cursor: pointer;
+    transition: background-color 0.2s linear; 
+    &:hover {
+        background-color: $ghover;
+    }
+    &:active {
+        background-color: darken($color: $genoa, $amount: 5);
+    }
+  }
+}
+

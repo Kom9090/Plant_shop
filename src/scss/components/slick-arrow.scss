@@ -1,0 +1,89 @@
+.slick-arrow {
+    position: absolute;
+    bottom: 120vw;
+    @extend %reset-btn;
+    height: 90px;
+    width: 50%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s linear 0.1s;
+    &:hover {
+          background-color: $genoa;
+          & .slick-arrow__name {
+              color: $white;
+          }
+          & .slick-arrow__head {
+              color: $athens;
+          }
+          & .slick-arrow__img path {
+              fill: $athens;
+          }
+    }
+    
+    @media(min-width: $sm) {
+        bottom: 0;
+        @include a-sizes("height", 160, 50, 2);
+        width: 25%;
+        @include a-sizes("padding-left", 49, 10, 2);
+    }
+		&_prev {
+      left: 0;
+      @media(min-width: $sm) {
+        left: auto;
+        right: 26%;
+      }
+		}
+
+		&_next {
+      right: 0;
+		}
+
+		&__head {
+      color: $dark;
+      display: flex;
+      align-items: center;
+      font-size: rem(16);
+      font-weight: 500;
+      line-height: 32px;
+      opacity: 0.5;
+      transition: color 0.3s linear;
+      @media(min-width: $sm) {
+        @include a-sizes("font-size", 24, 12, 2)
+      }
+		}
+
+		&__img {
+      width: 32px;
+      height: 32px;
+      margin: 0 8px 0 0;
+      & path {
+        transition: fill 0.3s linear;
+      }
+			&_next {
+        transform: rotate(180deg);
+        margin: 0 0 0 8px;
+			}
+		}
+
+		&__name {
+      @include cut-text(1);
+      color: $genoa;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 1.21;
+      transition: color 0.3s linear;
+      text-align: start;
+      @media(min-width: $sm) {
+        @include a-sizes("font-size", 30, 12, 2)
+      }
+			&_prev {
+			}
+
+			&_next {
+			}
+		}
+}
+

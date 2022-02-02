@@ -1,0 +1,46 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: $minWidth + px;
+  overflow-x: hidden;
+  position: relative;
+  font-family: $font-mont;
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+._container {
+  padding: 0 10px;
+  @media (min-width: $sm) {
+    padding: 0 15px;
+  }
+  @media (min-width: $xl) {
+    max-width: $container + px;
+    margin: 0 auto;
+  }
+}

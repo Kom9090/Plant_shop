@@ -1,0 +1,39 @@
+.modal-search {
+  &__content {
+    background-color: $bgwhite;
+    margin-top: 80px;
+  }
+
+  &__list {
+    @extend %reset-list;
+    margin-top: 20px;
+  }
+
+  &__item {
+    background-color: $white;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    display: block;
+    font-size: 1rem;
+    font-family: $font-mont;
+    color: $brown;
+    padding: 0.5rem 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.search-form {
+  display: flex;
+  max-width: 350px;
+  margin: 0 auto;
+  @media (min-width: $xs) {
+    flex-wrap: nowrap;
+  }
+  &__input {
+    flex: 0 0 100%;
+  }
+}

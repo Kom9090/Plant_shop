@@ -1,0 +1,25 @@
+.advantages-card {
+  border: 1px solid $alto;
+  padding: 22px 16px;
+  &__title {
+    @extend %reset-title;
+    color: $genoa;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    @extend %reset-p;
+    color: $brown;
+    font-size: rem(10);
+    line-height: 1.6;
+  }
+
+  &__img {
+    margin-right: 1em;
+  }
+}

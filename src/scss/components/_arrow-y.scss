@@ -1,0 +1,22 @@
+._arrow-y {
+  display: block;
+  width: 14px;
+  height: 8px;
+  &::after, &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 1px;
+      height: 6px;
+      background-color: $black;
+      transition: transform 0.3s linear;
+  }
+  &::after {
+      left: 6px; 
+      transform: rotate(-45deg);
+  }
+  &::before {
+      transform: rotate(45deg);
+      left: 10px;    
+  }
+}

@@ -1,0 +1,20 @@
+.person {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  &:hover {
+    background: url('../images/hexagon.svg') center / 36px no-repeat;
+    & .person__icon {
+      transform: scale(0.7);
+    }
+    & .person__icon path {
+      stroke: $white;
+    }
+  }
+  &__icon {
+    transition: transform 0.3s linear;
+  }
+}

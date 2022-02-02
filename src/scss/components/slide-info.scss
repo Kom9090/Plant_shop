@@ -1,0 +1,110 @@
+.slide-info {
+
+  &__title {
+    @extend %reset-title;
+    @include cut-text(2);
+    font-weight: 500;
+    @include a-sizes("font-size", 64, 32, 2);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    @media(min-width: $sm) {
+      color: $genoa;
+      @include a-sizes("font-size", 68, 10, 2);
+      @include cut-text(1);
+    }
+    @media(min-width: $lg) { 
+      @include cut-text(2);
+      max-width: 520px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid $alto;
+    @media(min-width: $sm) {
+      color: $black;
+    }
+  }
+
+  &__link {
+    margin-left: 5px;
+    min-width: 111px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(14);
+    font-family: $font-nunito;
+    position: relative;
+    transition: color 0.2s linear;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 75px;
+      height: 2px;
+      bottom: 3px;
+      background-color: $white;
+      transition: background-color 0.2s linear;
+    }
+    @media(min-width: $sm) {
+      color: $genoa;
+      &::before { 
+        background-color: $genoa;
+      }
+    }
+    @media(any-hover: hover) {
+      &:hover {
+        color: $ghover;
+      }
+
+      &:hover::before {
+        background-color: $ghover;
+      }
+    }
+  }
+
+  &__text {
+    @extend %reset-p;
+    font-family: $font-mont;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 15px;
+    @include cut-text(5);
+    @media(min-width: $sm) {
+      color: $brown;
+      @include cut-text(4);
+    }
+    @media(min-width: $lg) {
+      font-size: 1rem;
+    }
+    @media(min-width: $xl) {
+      @include cut-text(5);
+      font-size: rem(18);
+    }
+  }
+
+  &__btn {
+    @extend %reset-btn;
+    background-color: $white;
+    color: $genoa;
+    width: 100%;
+    min-height: 36px;
+    display: flex;
+    @media(min-width: $xs) {
+      width: 250px;
+    }
+    @media(min-width: $sm) {
+      color: $white;
+      background-color: $genoa;
+    }
+  }
+}

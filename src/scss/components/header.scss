@@ -1,0 +1,81 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  height: 65px;
+  border-bottom: 0.5px solid $alto;
+  z-index: 1000;
+  @media(min-width: $md) {
+    height: 78px;
+    background-color: transparent;
+    border: 0;
+  }
+  @media(min-width: $lg) {
+    height: 100px;
+  }
+
+  &._scrolling {
+    position: fixed;
+    background-color: $white;
+    box-shadow: 1px 1px 4px rgba($black, 0.2);
+    @media(min-width: $lg) {
+      height: 78px;
+    }
+  }
+
+  &__container {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    @media (min-width: $lg) {
+      padding: 0 56px;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    flex: 0 0 25%;
+    @media(min-width: $sm) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__search-btn {
+    flex: 0 0 25%;
+    @media(min-width: $sm) {
+      flex: 0 0 auto;
+      margin-left: auto;
+    }
+  }
+
+  &__cart {
+    flex: 0 0 25%;
+    @media(min-width: $sm) {
+      flex: 0 0 auto;
+      margin-left: $off * 2;
+    }
+  }
+
+  &__person {
+    flex: 0 0 25%;
+    @media(min-width: $sm) {
+      display: none;
+    }
+  }
+
+
+  &__sign-group {
+    top: 100%;
+    right: 0;
+  }
+}
+

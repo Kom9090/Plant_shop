@@ -1,0 +1,382 @@
+{
+  "products": [
+    {
+        "id": 0,
+        "title": "Kaktus Plants",
+        "price": 6,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup2.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Cactus",
+        "price": 8,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Cactus",
+        "price": 11,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup4.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup5.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Cactus",
+        "price": 7,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup2.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Cactus",
+        "price": 4,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Cactus",
+        "price": 9,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 18,
+        "title": "Cactus",
+        "price": 18,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Aloe Vera",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup5.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Cactus",
+        "price": 6,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 21,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup4.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Cactus",
+        "price": 5,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 23,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup2.jpg"
+    },
+    {
+        "id": 24,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 25,
+        "title": "Cactus",
+        "price": 9,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 26,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup.jpg"
+    },
+    {
+        "id": 27,
+        "title": "Cactus",
+        "price": 13,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 28,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 29,
+        "title": "Cactus",
+        "price": 11,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup4.jpg"
+    },
+    {
+        "id": 30,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 31,
+        "title": "Cactus",
+        "price": 11,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 32,
+        "title": "Aloe Vera",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup5.jpg"
+    },
+    {
+        "id": 33,
+        "title": "Cactus",
+        "price": 14,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 34,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 35,
+        "title": "Cactus",
+        "price": 3,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 36,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 37,
+        "title": "Cactus",
+        "price": 3,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup.jpg"
+    },
+    {
+        "id": 38,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 39,
+        "title": "Cactus",
+        "price": 17,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 40,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 41,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 42,
+        "title": "Cactus",
+        "price": 8,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 43,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup.jpg"
+    },
+    {
+        "id": 44,
+        "title": "Cactus",
+        "price": 8,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 45,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 46,
+        "title": "Cactus",
+        "price": 7,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 47,
+        "title": "Cactus",
+        "price": 15,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup5.jpg"
+    },
+    {
+        "id": 48,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 49,
+        "title": "Cactus",
+        "price": 12,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 50,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup3.jpg"
+    },
+    {
+        "id": 51,
+        "title": "Cactus",
+        "price": 14,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup4.jpg"
+    },
+    {
+        "id": 52,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup2.jpg"
+    },
+    {
+        "id": 53,
+        "title": "Cactus",
+        "price": 10,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab dolorem ipsa doloremque quia iste fugit. Nisi eos facere laboriosam provident?", 
+        "src": "./images/MaskGroup4.jpg"
+    }
+  ]
+}

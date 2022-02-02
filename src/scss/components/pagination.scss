@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  
+  @media(min-width: $sm) {
+    justify-content: flex-end;
+  }
+  &__button {
+    @extend %reset-btn;
+    min-width: 36px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $genoa;
+    padding: 0 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    &:not(:first-child) {
+      margin-left: $off;
+    }
+    @media(any-hover: hover) {
+      &:hover:not(:disabled) {
+        background-color: $genoa;
+        color: $white;
+      }
+      &:active {
+        background-color: $gdark;
+      }
+    }
+    &:active {
+      background-color: $gdark;
+    }
+  }
+}

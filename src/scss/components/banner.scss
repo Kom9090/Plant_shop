@@ -1,0 +1,39 @@
+.banner {
+  &__container {
+    @media (min-width: $xl) {
+      padding: 0 56px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: $off-section;
+  }
+
+  &__content {
+    background: $athens url('../../images/sanni-576.jpg') right bottom / 48% no-repeat;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8.3%;
+    @media (min-width: $sm) {
+      background: $athens url('../../images/sanni.jpg') right bottom / 34% no-repeat;
+    }
+  }
+
+  &__title {
+    max-width: 80%;
+    margin-bottom: 32px;
+    @media (min-width: $sm) {
+      max-width: 60%;
+    }
+    @media (min-width: $md) {
+      max-width: 50%;
+    }
+  }
+
+  &__btn {
+    max-width: 152px;
+    min-height: 40px;
+  }
+}

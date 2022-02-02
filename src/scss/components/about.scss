@@ -1,0 +1,63 @@
+.about {
+  &__container {
+    @media (min-width: $xl) {
+      padding: 0 56px;
+    }
+  }
+
+  &__wrapper {
+    margin-bottom: $off-section;
+    @media (min-width: $sm) {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      @include a-sizes('column-gap', 80, 0, 2);
+      @include a-sizes('row-gap', 50, 10, 2);
+    }
+  }
+
+  &__top-img {
+    background: url('../../images/abbh.jpg') center / cover no-repeat;
+    width: 100%;
+    padding-bottom: 44%;
+    @media (min-width: $sm) {
+      order: 3;
+    }
+  }
+
+  &__content {
+    margin: $off * 2 auto;
+    @media (min-width: $xs) {
+      max-width: 450px;
+    }
+    @media (min-width: $sm) {
+      max-width: 532px;
+      margin: 0;
+      margin-left: $off;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    @media (min-width: $sm) {
+    }
+  }
+
+  &__text {
+    @extend %reset-p;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: $brown;
+    @media (min-width: $sm) {
+    }
+  }
+
+  &__bottom-img {
+    background: url('../../images/abbgv.jpg') right / cover no-repeat;
+    width: 100%;
+    padding-bottom: 119%;
+    @media (min-width: $sm) {
+      order: 2;
+      grid-area: span 2;
+    }
+  }
+}

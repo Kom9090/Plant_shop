@@ -1,0 +1,47 @@
+<div class="popup modal-signIn" id="signIn">
+  <div class="popup__content modal-signIn__content">
+    <header class="popup__header">
+      <h2 class="_section-title popup__title">Sign in</h2>
+      <button class="popup__close" type="button" aria-label="button close modal window" data-close>
+        <img
+          class="popup__close-icon"
+          src="./images/dagger.svg"
+          alt="dagger"
+          width="20px"
+          height="20px"
+        />
+      </button>
+    </header>
+    <div class="popup__body">
+      <form class="modal-signIn__form form" name="signIn" action="get" novalidate>
+        <label class="form__label">
+          <span class="form__label-text">Email</span>
+          <input
+            class="form__input _input"
+            id="email_signIn"
+            type="email"
+            placeholder="Email"
+            name="email_signIn"
+            required
+          />
+          <span class="form__error" aria-live="polite"></span>
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Password</span>
+          <input
+            class="form__input _input"
+            id="pass_signIn"
+            type="password"
+            placeholder="Password"
+            name="pass_signIn"
+            minlength="6"
+            maxlength="16"
+            required
+          />
+          <span class="form__error" aria-live="polite"></span>
+        </label>
+        <button class="form__btn _main-button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

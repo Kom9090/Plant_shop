@@ -1,0 +1,70 @@
+.goods {
+  &__container {
+    @media (min-width: $xl) {
+      padding: 0 56px;
+    }
+  }
+
+  &__body {
+    margin-bottom: $off-section;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $alto;
+    margin-bottom: $off * 2;
+    @media (min-width: $md) {
+      margin-bottom: $off * 4;
+    }
+  }
+
+  &__title {
+    margin-right: $off;
+  }
+  &__select-wrapper {
+    position: relative;
+  }
+  &__select-arrow {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 10px;
+    pointer-events: none;
+  }
+  &__select {
+    height: 32px;
+    background: $white;
+    border: 1px solid $alto;
+    width: 131px;
+    font-size: rem(12);
+    color: $black;
+    font-family: inherit;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 0 10px;
+    transition: border-color 0.1s linear, box-shadow 0.1s linear;
+    &:focus {
+      outline: none;
+      border-color: $ghover;
+      box-shadow: 1px 0px 6px rgba($color: $ghover, $alpha: 0.5);
+    }
+  }
+  &__list {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    @media (min-width: $md) {
+      margin: -$off;
+    }
+  }
+  &__pagination {
+    margin-top: $off * 2;
+    @media (min-width: $md) {
+      margin-top: $off * 4;
+    }
+  }
+}

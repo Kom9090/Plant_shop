@@ -1,0 +1,28 @@
+.search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $alto;
+  @media(min-width: $sm) {
+    border: 0;
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    background: url('../images/hexagon.svg') center / 36px no-repeat;
+  }
+  &:hover .search__path {
+    stroke: $white;
+  }
+  &:hover .search__img {
+    transform: scale(0.7);
+  }
+    
+  &__img {
+    transition: transform 0.3s linear;
+  }
+
+  &__path {
+  }
+}

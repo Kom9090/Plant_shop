@@ -1,0 +1,52 @@
+.cart {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  border-right: 1px solid $alto;
+  position: relative;
+  &:hover {
+    background: url('../images/hexagon.svg') center / 36px no-repeat;
+  }
+  &:hover .cart__path {
+      stroke: $white;
+  }
+  &:hover .cart__icon {
+      transform: scale(0.7);
+  }
+  @media(min-width: $sm) {
+    border: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__icon {
+    transition: transform 0.3s linear;
+  }
+
+  &__path {
+  }
+
+  &__label {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(202, 66, 25);
+    border-radius: 50%;
+    color: $white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 200;
+    @media(min-width: $md) {
+      top: -5px;
+      right: -5px;
+    }
+  }
+}

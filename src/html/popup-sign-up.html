@@ -1,0 +1,57 @@
+<div class="popup modal-signUp" id="signUp">
+  <div class="popup__content modal-signUp__content">
+    <header class="popup__header">
+      <h2 class="_section-title popup__title">Sign up</h2>
+      <button class="popup__close" type="button" aria-label="button close modal window" data-close>
+        <img
+          class="popup__close-icon"
+          src="./images/dagger.svg"
+          alt="dagger"
+          width="20px"
+          height="20px"
+        />
+      </button>
+    </header>
+    <div class="popup__body">
+      <form class="modal-signUp__form form" name="signUp" action="get" novalidate>
+        <label class="form__label">
+          <span class="form__label-text">Name</span>
+          <input
+            class="form__input _input"
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            required
+          />
+          <span class="form__error" aria-live="polite"></span>
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Email</span>
+          <input
+            class="form__input _input"
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <span class="form__error" aria-live="polite"></span>
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Password</span>
+          <input
+            class="form__input _input"
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <span class="form__error" aria-live="polite"></span>
+        </label>
+        <button class="form__btn _main-button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

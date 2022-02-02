@@ -1,0 +1,59 @@
+.modal-signUp,
+.modal-signIn {
+  &__content {
+    background-color: $bgwhite;
+    @media (min-width: $sm) {
+      min-width: 0;
+    }
+    @media (min-width: $md) {
+      min-width: 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $xs) {
+      align-items: center;
+    }
+  }
+}
+
+.form {
+  &__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label-text {
+    margin-bottom: 10px;
+    font-size: rem(14);
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+    @media (min-width: $xs) {
+      width: 300px;
+    }
+  }
+
+  &__btn {
+    @extend %reset-btn;
+    height: 36px;
+    width: 100%;
+    margin: 1rem 0;
+    @media (min-width: $xs) {
+      width: 300px;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: rem(12);
+    color: rgb(173, 61, 61);
+  }
+}

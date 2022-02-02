@@ -1,0 +1,52 @@
+//=======================================================================================
+// rem ==================================================================================
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{calc($pixels / $context) + rem};
+}
+
+@function pct($parent, $child) {
+  @return #{calc($child * 100% / $parent)};
+}
+
+@function lh($heightFont, $fontSize) {
+  @return #{calc($heightFont/ $fontSize)};
+}
+// sizes ================================================================================
+@mixin a-sizes($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+  $Width: $maxWidth - $minWidth;
+  @if $type==1 {
+    #{$property}: $startSize + px;
+    @media (max-width: #{$container + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$container - $minWidth})
+      );
+    }
+  } @else if $type==2 {
+    #{$property}: rem($minSize);
+    @media (min-width: #{$minWidth + px}) {
+      #{$property}: calc(
+        #{rem($minSize)} + #{$addSize} * ((100vw - #{rem($minWidth)}) / #{$container - $minWidth})
+      );
+    }
+    @media (min-width: #{$container + px}) {
+      #{$property}: rem($startSize);
+    }
+  } @else {
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$Width}));
+  }
+}
+//=======================================================================================
+
+//========================================================================================
+// cut-text ====================================================================================
+$line-default: 1;
+@mixin cut-text($lines: $line-default) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,22 @@
+._main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $genoa;
+  color: $white;
+  font-size: 0.875rem;
+  font-family: $font-nunito;
+  line-height: 1.5;
+  transition: background-color 0.2s linear; 
+  @media(any-hover: hover) {
+    &:hover {
+      background-color: $ghover;
+    }
+    &:active {
+      background-color: $gdark;
+    }
+  }
+  &:active {
+    background-color: $gdark;
+  }
+}

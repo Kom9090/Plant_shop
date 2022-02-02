@@ -1,0 +1,28 @@
+<div class="popup modal-search" id="searchModal">
+  <div class="popup__content modal-search__content">
+    <header class="popup__header">
+      <h2 class="_section-title popup__title">Searching</h2>
+      <button class="popup__close" type="button" aria-label="button close modal window" data-close>
+        <img
+          class="popup__close-icon"
+          src="./images/dagger.svg"
+          alt="dagger"
+          width="20px"
+          height="20px"
+        />
+      </button>
+    </header>
+    <div class="popup__body modal-search__body">
+      <form class="search-form search__form" action="GET">
+        <input
+          class="search-form__input _input"
+          type="search"
+          placeholder="searching"
+          maxlength="32"
+        />
+      </form>
+
+      <ul class="modal-search__list"></ul>
+    </div>
+  </div>
+</div>

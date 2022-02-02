@@ -1,0 +1,38 @@
+@import './templates/vars.scss';
+@import './templates/mixins.scss';
+@import './templates/patterns.scss';
+@import './components/global';
+@import './components/fonts';
+// =========================================
+@import './components/main-button';
+@import './components/arrow-y';
+@import './components/titles';
+@import './components/tooltips';
+// Header =========================================
+@import './components/header';
+@import './components/logo';
+@import './components/cart';
+@import './components/search';
+@import './components/person';
+@import './components/sign-group';
+// top ===========================================
+@import './components/top';
+@import './components/slide-info';
+@import './components/top-img';
+@import './components/slick-arrow';
+// advantages ====================================
+@import './components/advantages';
+@import './components/advantages-card';
+// goods =========================================
+@import './components/goods';
+@import './components/product';
+@import './components/pagination';
+@import './components/about';
+@import './components/banner';
+// footer ========================================
+@import './components/footer';
+@import './components/address';
+@import './components/popup';
+@import './components/modal-cart';
+@import './components/modal-search';
+@import './components/modal-sign-up';

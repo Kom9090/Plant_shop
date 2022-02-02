@@ -1,0 +1,49 @@
+.address {
+
+  font-style: normal;
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    font-family: $font-work;
+    font-size: rem(13);
+    line-height: 1.5;
+    color: $dark;
+    max-width: 300px;
+  }
+}
+
+._input {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 8px 13px;
+  border-radius: 2px;
+  height: 38px;
+  border: 1px solid $athens;
+  font-family: $font-work;
+  transition: border-color 0.2s linear;
+  &::-webkit-input-placeholder       {opacity: 1;}
+  &::-moz-placeholder                {opacity: 1;}
+  &:-moz-placeholder                 {opacity: 1;}
+  &:-ms-input-placeholder            {opacity: 1;}
+  &:focus::-webkit-input-placeholder {opacity: 0;}
+  &:focus::-moz-placeholder          {opacity: 0;}
+  &:focus:-moz-placeholder           {opacity: 0;}
+  &:focus:-ms-input-placeholder      {opacity: 0;}
+  &:hover {
+      border-color: $alto;
+  }
+  &:focus {
+      border-color: $genoa;
+      outline: none;
+  }
+}

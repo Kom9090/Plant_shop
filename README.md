@@ -1,13 +1,3 @@
 # Plant shop
 
-Educational project
-
-
-## Tech
-
-- HTML;
-- SCSS;
-- Jquery;
-- Gulp;
-
-(https://kom9090.github.io/Plant_shop/)
+[link\_>>>](https://kom9090.github.io/Plant_shop/)
