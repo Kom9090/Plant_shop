@@ -41,3 +41,6 @@ searching();
 import { formValidation } from './modules/formValidation.js';
 formValidation('signUp');
 formValidation('signIn');
+
+import { showPassword } from './modules/showPassword.js';
+showPassword();

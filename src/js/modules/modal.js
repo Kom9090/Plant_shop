@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import $ from 'jquery';
 export const modal = () => {
   const modalClose = $('[data-close]');
@@ -23,6 +24,48 @@ export const modal = () => {
     } else if (modalId === '#signUp') {
       $('#name').focus();
     }
+
+    if (e.target.closest('.slide-info__link')) {
+      $('.modal-product__body').html('');
+      $('.modal-product__title').html(
+        `${$(e.target).parent().parent().find('.slide-info__title').text()}`
+      );
+      let div = $('<div class="modal-product__item">');
+      div.html(` 
+      <div class="modal-product__img-wrapper">
+        <picture>
+          <source srcset="${$(e.target)
+            .parent()
+            .parent()
+            .parent()
+            .find('.top-img__img')
+            .attr('src')
+            .replace('jpg', 'webp')}" media="(max-width: 0px)" type="image/webp" />
+          <img
+            class="modal-product__img"
+            src="${$(e.target).parent().parent().parent().find('.top-img__img').attr('src')}"
+            alt="plant"
+            loading="lazy"
+            width="300"
+            height="300"
+          />
+        </picture>
+      </div>
+      <div class="modal-product__info">
+        <p class="modal-product__text">
+          ${$(e.target).parent().parent().find('.slide-info__text').text()}
+        </p>
+        <span class="modal-product__price"
+          >Price: <span class="modal-product__number">${$(e.target)
+            .parent()
+            .find('.slide-info__price')
+            .text()}</span></span
+        >
+        <button class="modal-product__btn _main-button _add-to-cart" type="button">Add to cart</button>
+      </div>
+      `);
+      $('.modal-product__body').append(div);
+    }
   });
 
   $(document).on('click', function (e) {
@@ -43,7 +86,9 @@ export const modal = () => {
       $.ajax('./files/json/goods.json', {
         success: function (data) {
           const products = data.products;
-          let div = $('<div class="popup__body modal-product__body">');
+          $('.modal-product__body').html('');
+          $('.modal-product__title').html(`${products[itemId].title}`);
+          let div = $('<div class="modal-product__item">');
           div.html(`
           <div class="modal-product__img-wrapper">
               <picture>
@@ -70,10 +115,10 @@ export const modal = () => {
                     products[itemId].price
                   }$</span></span
                 >
-                <button class="modal-product__btn _link-btn _add-to-cart" type="button">Add to cart</button>
+                <button class="modal-product__btn _main-button _add-to-cart" type="button">Add to cart</button>
             </div>
           `);
-          $('.modal-product__content').append(div);
+          $('.modal-product__body').append(div);
         }
       });
     }

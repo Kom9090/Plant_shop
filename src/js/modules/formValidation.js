@@ -72,7 +72,7 @@ export const formValidation = (elem) => {
     let error = isError();
     if (!error) {
       sending(form, 'add');
-      let response = await fetch('../index.html', {
+      let response = await fetch('../templates.html', {
         method: 'POST'
       });
       if (response.ok) {

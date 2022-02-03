@@ -16,7 +16,7 @@
   }
 
   &__top-img {
-    background: url('../../images/abbh.jpg') center / cover no-repeat;
+    background: url('./../images/abbh.jpg') center / cover no-repeat;
     width: 100%;
     padding-bottom: 44%;
     @media (min-width: $sm) {
@@ -52,7 +52,7 @@
   }
 
   &__bottom-img {
-    background: url('../../images/abbgv.jpg') right / cover no-repeat;
+    background: url('./../images/abbgv.jpg') right / cover no-repeat;
     width: 100%;
     padding-bottom: 119%;
     @media (min-width: $sm) {

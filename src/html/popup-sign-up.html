@@ -13,7 +13,7 @@
       </button>
     </header>
     <div class="popup__body">
-      <form class="modal-signUp__form form" name="signUp" action="get" novalidate>
+      <form action="get" class="modal-signUp__form form" name="signUp" novalidate>
         <label class="form__label">
           <span class="form__label-text">Name</span>
           <input
@@ -40,8 +40,9 @@
         </label>
         <label class="form__label">
           <span class="form__label-text">Password</span>
+          <button class="form__show-password" type="button" aria-hidden="true"></button>
           <input
-            class="form__input _input"
+            class="form__input _input _password"
             id="password"
             name="password"
             type="password"

@@ -23,19 +23,26 @@
   &__label {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     position: relative;
   }
 
   &__label-text {
-    margin-bottom: 10px;
-    font-size: rem(14);
+    margin-bottom: 6px;
+    font-size: rem(12);
   }
 
   &__input {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     @media (min-width: $xs) {
       width: 300px;
+    }
+    &._invalid {
+      border-color: rgb(179, 29, 29);
+    }
+    &._valid {
+      border-color: rgb(0, 150, 20);
     }
   }
 
@@ -43,17 +50,40 @@
     @extend %reset-btn;
     height: 36px;
     width: 100%;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     @media (min-width: $xs) {
       width: 300px;
     }
   }
 
   &__error {
-    position: absolute;
     bottom: 5px;
     left: 0;
     font-size: rem(12);
-    color: rgb(173, 61, 61);
+    color: rgb(179, 29, 29);
+  }
+
+  &__show-password {
+    @extend %reset-btn;
+    display: none;
+    position: absolute;
+    top: 22px;
+    right: 2px;
+    width: 40px;
+    height: 34px;
+    background: $white url('./../images/eye.svg') center / 20px no-repeat;
+    &::after {
+      @extend %absolute;
+      top: 16px;
+      left: 8px;
+      width: 24px;
+      height: 1.2px;
+      background-color: $dark;
+      transform: rotate(45deg);
+      transition: 0.3s;
+    }
+    &._show::after {
+      opacity: 0;
+    }
   }
 }

@@ -57,7 +57,13 @@ function addToCart(item, id) {
       const productSrc = item.parent().parent().find('.top-img__img').attr('src');
       renderProduct(productSrc, productName, productPrice, id);
     } else if (item.hasClass('modal-product__btn')) {
-      const productName = item.parent().find('.modal-product__title').text();
+      const productName = item
+        .parent()
+        .parent()
+        .parent()
+        .parent()
+        .find('.modal-product__title')
+        .text();
       const productPrice = item
         .parent()
         .find('.modal-product__number')
@@ -66,10 +72,9 @@ function addToCart(item, id) {
           return text.replace('$', '');
         })
         .text();
-      const productSrc = item.parent().find('.modal-product__img').attr('src');
+      const productSrc = item.parent().parent().find('.modal-product__img').attr('src');
       renderProduct(productSrc, productName, productPrice, id);
     } else {
-      const productImage = item.parent().find('.product__img-wrapper');
       const productName = item.parent().find('.product__link').text();
       const productPrice = item
         .parent()

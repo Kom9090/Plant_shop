@@ -10,14 +10,14 @@
   }
 
   &__content {
-    background: $athens url('../../images/sanni-576.jpg') right bottom / 48% no-repeat;
+    background: $athens url('./../images/sanni-576.jpg') right bottom / 48% no-repeat;
     height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 8.3%;
     @media (min-width: $sm) {
-      background: $athens url('../../images/sanni.jpg') right bottom / 34% no-repeat;
+      background: $athens url('./../images/sanni.jpg') right bottom / 34% no-repeat;
     }
   }
 
